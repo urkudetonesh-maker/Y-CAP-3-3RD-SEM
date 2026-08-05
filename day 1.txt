@@ -1,0 +1,414 @@
+#include <stdio.h>
+int main()
+{
+    int p, r, t;
+    float si;
+    printf("enter principal:\n");
+    scanf("%d", &p);
+    printf("enter the rate of intrest:\n");
+    scanf("%d", &r);
+    printf("enter the duration:\n");
+    scanf("%d", &t);
+    si=p*r*t/100;
+    printf("simple intrest:%f", si);
+    return 0;
+}
+
+
+area of circle
+
+
+#include<stdio.h>  
+#define PI 3.1452  
+int main()  
+{  
+ float radius,area;  
+ printf("\nEnter radius of circle : ");  
+ scanf("%f",&radius);  
+ area=PI*radius*radius;  
+ printf("\nArea of Circle is %.2f",area);  
+return 0;  
+} 
+
+reverse 
+
+#include <stdio.h>
+
+int main()
+{
+    int num, a, b, c, d, e, f, reverse;
+
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    a = num % 10;
+    num = num / 10;
+
+    b = num % 10;
+    num = num / 10;
+
+    c = num % 10;
+    num = num / 10;
+
+    d = num % 10;
+    num = num / 10;
+
+    e = num % 10;
+    num = num / 10;
+
+    f = num;
+
+    reverse = a * 100000 + b * 10000 + c * 1000 + d * 100 + e * 10 + f * 1;
+
+    printf("Reverse: %d", reverse);
+
+    return 0;
+}
+
+#include<stdio.h>  
+int main()
+{
+    float n, inch, cm;
+    printf("enter hight in feet:");
+    scanf("%f", &n);
+    inch=n*12;
+    cm=inch*2.54;
+    printf("%f inches", inch);
+    printf("\n%f centimeter", cm);
+    return 0;
+    
+}
+
+
+
+ #include<stdio.h> 
+int main()    
+{    
+    char  c1,c2;    
+    int  i1,i2;    
+    float  f1,f2;    
+    c1='H';    
+    i1=80.56; 
+    f1=12.6;    
+    c2=i1;      
+    i2=f1;    
+     
+    printf("\nc2 = %c , i2 = %d",c2,i2);    
+    f2=i1;      
+    i2=c1;      
+ 
+    printf("\nf2 = %.2f , i2 = %d",f2,i2);    
+    return 0;
+} 
+
+
+#include <stdio.h>
+int main()
+{
+    char ch;
+    printf("enter character in upper case:");
+    scanf("%c", &ch);
+    ch=ch+32;
+    printf("character in lower case %c", ch);
+}
+
+
+#include <stdio.h>
+int main()
+{
+    int a=10;
+    printf("%d\n",a++);
+    printf("%d\n",a);
+    printf("%d\n",++a);
+    printf("%d\n",a);
+    printf("%d\n",a++);
+    printf("%d\n",++a);
+    printf("%d\n",a);
+    
+}
+
+
+#include <stdio.h>
+int main()
+{
+    int a=10;
+    printf("%d\n",a--);
+    printf("%d\n",a);
+    printf("%d\n",--a);
+    printf("%d\n",a);
+    printf("%d\n",a--);
+    printf("%d\n",--a);
+    printf("%d\n",a);
+    
+}
+
+
+#include <stdio.h>
+#define FALSE -1
+#define NULL O  (VARRIES TO COMPILER)
+#define TRUE 1
+int main()
+{
+    if (NULL)
+    {
+        printf("NULL");
+    }
+    else if (FALSE)
+    {
+        printf("TRUE");
+    }
+    else
+    {
+        printf("FALSE");
+    }
+    return 0;
+    
+}  
+
+The output is TRUE because NULL is 0 (false), but FALSE is -1, and in C any non-zero value is treated as true.
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int i=0, j=0;
+    if (i++==j++)
+    {
+        printf("%d %d",i--, j--);
+        
+    }
+    else 
+    {
+        printf("%d %d", i, j);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    char str[8]=="if block";
+    if (str == "if block")
+    {
+        printf("if block execute.");
+    }
+    else
+    {
+        printf("else block execute.");
+    }
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    char str[]="\0";
+    if(printf("%s", str))
+    {
+        printf("inside if block");
+    }
+    else
+    {
+        printf("inside else block");
+    }
+    return 0;
+}
+the printf statement or expression inside if block prints nothing. So the expression returns 0 and else block gets executed.
+
+#include <stdio.h>
+int main()
+{
+    char str[]="ashish\n";
+    if(printf("%s", str))
+    {
+        printf("inside if block");
+    }
+    else
+    {
+        printf("inside else block");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    int i=5, j=4;
+    if(!printf(""))
+    {
+        printf("%d %d", i, j);
+    }
+    else
+    {
+        printf("%d %d", i++, ++j);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+    int i=1, j=0;
+    if(i--==j)
+    {
+        printf("i=%d", --i);
+    }
+    else
+    {
+        printf("j=%d", ++j);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+    int i=2;
+    
+    if(i==(1,2))
+    {
+        printf("hello ashish");
+    }
+    else
+    {
+        printf("hello ");
+    }
+    
+    return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+    int i=5;
+    
+    if(i==3,4)
+    {
+        printf("hello");
+    }
+    else
+    {
+        printf("hii");
+    }
+    
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    if(sizeof(0))
+    {
+        printf("Hiii");
+    }
+    else
+    {
+        printf("Hello");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    int i, j;
+    for(i=1, j=1; i<=3, j<=3; i++, j++)
+    {
+        printf("%d%d", i, j);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+   
+    for(; ; )
+    {
+        printf("%d%", 20);
+    }
+    return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i=0;i<=3;i++);
+    {
+        printf("%d%", i);
+    }
+    return 0;
+} output is 4
+
+
+
+#include <stdio.h>
+int main()
+{
+    int i;
+    for(i=0;i==0;i++)
+    {
+        printf("%d%", i);
+    }
+    return 0;
+} output is 0
+
+
+
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    for(i=0,j=5;i<j;i++,j--)
+    {
+        printf("%d%d", i,j);
+    }
+    return 0;
+}    051423
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int x=-1;
+    while(x++==1)
+    {
+        printf("loop");
+    }
+    return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+    int i=0;
+    while(i++)
+    {
+        printf("loop");
+        if (i==3)
+        {
+            break;
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,289 @@
+
+#include <stdio.h>
+int main() {
+    int arr[1]={2};
+    printf("%d", 0[arr]);
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+    int arr[3], i=0;
+    for (i=0; i<3 ; i++)
+    {
+        arr[i]=i;
+    }
+    for (i=0; i<3 ; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+    int arr[3], i,j;
+    arr[0]=11;
+    arr[1]=22;
+    arr[2]=33;
+    for (i=0; i<3 ; i++)
+    {
+        j=i;
+    }
+    printf("%d ", arr[j]);
+}
+
+
+
+#include <stdio.h>
+int main() {
+    int arr[3], i, temp;
+    arr[0]=11;
+    arr[1]=22;
+    arr[2]=33;
+    temp=arr[0];
+    arr[0]=arr[2];
+    arr[2]=temp;
+    for (i=0; i<3 ; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+    int i;
+    char name[]="ARYAN";
+    for (i=0; i<5 ; i++)
+    {
+        printf("%c ", name[i]);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+    int i=0;
+    char name[]="ARYAN";
+    
+    printf("%c ", name[i]);
+    printf("%c ", i[name]);
+    printf("%c ", name[i+2]);
+    printf("%c ", i[name+2]);
+    
+    return 0;
+}  A A Y Y
+
+
+
+#include <stdio.h>
+#define arr "abcd"
+int main() {
+    printf("%c", arr[2]);
+    return 0;
+}   c
+
+
+
+#include <stdio.h>
+int main() {
+    int arr[2]={1,2,3,4,5};
+    printf("%d", arr[3]);    
+    return 0;
+}   0 in some compiler and garbge value
+
+
+
+
+#include <stdio.h>
+int main() {
+    int i=0;
+    char s[4]={'\0','\0','\0','\0'};
+    for (i=0; i<4; i++)
+    {
+        printf("%c", s[i]);
+    }
+    return 0;
+}
+
+
+#include<stdio.h>  
+int main()  
+{  
+    int arr[5],i;  
+    for(i=0;i<5;i++)  
+    {  
+        printf(" Enter a value of array arr[%d]:",i);  
+        scanf("%d",&arr[i]);          
+    }  
+    printf(" The array element are: ");  
+    for(i=0;i<5;i++)  
+    {  
+        printf("%d\t", arr[i]);  
+    }  
+     return 0;  
+} 
+
+
+
+#include<stdio.h>  
+int main()  
+{  
+    int arr[10],i, even=0, odd=0;  
+    for(i=0;i<=10;i++)  
+    {  
+        printf(" Enter a value of array arr[%d]:",i);  
+        scanf("%d",&arr[i]);  
+        if(arr[i]%2==0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }  
+    printf(" even=%d and odd=%d ",even, odd);  
+     return 0;  
+}  
+
+
+#include<stdio.h>  
+int main()  
+{  
+    int i,j; 
+    int matrix[4][3]={ {1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+    for(i=0;i<4;i++) {
+        for (j=0;j<3;j++){
+            printf("matrix[%d][%d]",i,j);
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+     return 0;  
+} 
+
+
+
+#include<stdio.h>  
+int function(int,int);
+int main()  
+{  
+    int a=25, b=24+1,c;
+    printf("%d", function(a,b));
+    return 0;
+}  
+int function(int x, int y)
+{
+    return (x-(x==y));
+}
+
+
+#include<stdio.h>  
+int function(int);
+int main()  
+{  
+    int n=function(4);
+    printf("%d\n", --n);
+    return 0;
+}  
+int function(int n)
+{
+    return (n++);
+}    3 is output
+
+
+
+#include<stdio.h>  
+int function(int);
+int main()  
+{  
+    int num=function(sizeof(float));
+    printf("Value is %d", ++num);
+    return 0;
+}  
+int function(int returns)
+{
+    returns+=5.31;
+    return (returns);
+}
+    10
+
+
+
+
+
+#include<stdio.h>  
+int num=5;
+int fun();
+int main()  
+{  
+    fun();
+    fun();
+    return 0;
+}  
+int fun()
+{
+    static int num=2;
+    printf("%d", num);
+    num++;
+    
+    return 0;
+}
+   23
+
+
+#include<stdio.h>  
+void fun(int);
+int main()  
+{  
+    int a=3;
+    fun(a);
+    return 0;
+}  
+void fun(int n)
+{
+    if (n>0)
+    {
+        fun (--n);
+        printf("%d", n);
+    }
+}
+recursive fn always works as stack FILO first in last out
+
+
+
+DATA STRUCTURE ARE DIFFERENT WAYS OF ORGANIZING DATA ON YOUR COMPUTER, THAT CAN BE USED EFFECTIVELY.
+
+
+
+DSA
+
+swap without 3rd variable
+
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("entre value of a and b:");
+    scanf("%d%d",&a,&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("after swaping\n a=%d b=%d", a,b);
+    return 0;
+} 
+
+time complexity
+TO MASURE THE PERFOMANCE OF PROGRAM
+Big O -O(N) worst case scenario
+big Ω omega   best Ω1
+big Θ theta average Θ(n/2)
+
+
+
+
